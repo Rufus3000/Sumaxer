@@ -1,0 +1,67 @@
+body{
+    background-color: black;
+    color: purple;
+    font-family: "Arial";
+    background-image: url("https://i.imgur.com/ylS4p5M.jpg");
+    background-repeat: no-repeat;
+    font-size: 5em;
+    text-align: center;
+}
+.lic{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    left: 0;
+    top: 0;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    transition: 0.6s;
+    transform-style: preserve-3d;
+
+}
+.rub{
+    background-image: url("https://www.samplemagic.com/images/uploads/stock/large_1598-1499727507.jpg");
+    background-position: center;
+    width: inherit;
+    height: inherit;
+    transform: rotateY(0deg);
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+.karta{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(77, 76, 76);
+    position: relative;
+    margin: 5px;
+}
+.board{
+    display: flex;
+    flex-wrap: wrap;    
+    width: 840px;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.karta-flip {
+	perspective: 1000px;
+}
+.karta-flip:hover .karta  {
+        transform: rotateY(-180deg);
+    }
+.karta-flip:hover .lic{
+    backface-visibility: visible;
+}
+.karta-flip:hover .rub{
+    backface-visibility: hidden;
+} 
+.karta {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+    position: relative;
+}
+
